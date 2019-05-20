@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Погода</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="offer">
+		<div class="inner blured">
+		<span>Нажатием на кнопку "Узнать" Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a
+			href="http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf">Условиями предоставления подписки</a>. Стоимость подписки SUBPRICE.ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER.</span>
+		</div>
+	</div>
+	<div class="inner blured">
+		<div class="name">
+			<span>Погода</span>
+		</div>
+		<div class="search">
+			<div></div>
+		</div>
+		<div class="plus18">
+			<div></div>
+		</div>
+	</div>
+</div>
+
+<div class="main">
+	<div class="inner blured">
+		<div class="temperature">
+			<div class="inner">
+				<div class="your-city clearfix">
+					<div class="favorite">
+						<button disabled></button>
+					</div>
+				</div>
+				<div class="degrees">
+					<button disabled>
+						<div class="icon"></div>
+						<p class="knowweather">Узнать погоду<br>в вашем городе</p>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="details">
+			<div class="inner">
+				<div class="details-item wind">
+					<span>1 м/с</span>
+				</div>
+				<div class="details-item humidity">
+					<span>40%</span>
+				</div>
+				<div class="details-item pressure">
+					<span>767 мм.рт.ст</span>
+				</div>
+				<div class="details-item water">
+					<span>+10&deg;c</span>
+				</div>
+			</div>
+		</div>
+		<div class="placeholder">
+			<div class="inner"></div>
+		</div>
+		<div class="hours">
+			<div class="inner">
+				<ul>
+					<li>
+						<div class="box">
+							<div class="box-dot"></div>
+							<div class="temp-wrapper">
+								<div class="icon"></div>
+							</div>
+							<div class="time">
+								<span>Сейчас</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<div class="box-dot"></div>
+							<div class="temp-wrapper">
+								<div class="icon"></div>
+							</div>
+							<div class="time">
+								<span>13:00</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<div class="box-dot"></div>
+							<div class="temp-wrapper">
+								<div class="icon"></div>
+							</div>
+							<div class="time">
+								<span>14:00</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<div class="box-dot"></div>
+							<div class="temp-wrapper">
+								<div class="icon"></div>
+							</div>
+							<div class="time">
+								<span>15:00</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<div class="box-dot"></div>
+							<div class="temp-wrapper">
+								<div class="icon"></div>
+							</div>
+							<div class="time">
+								<span>16:00</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<div class="box-dot"></div>
+							<div class="temp-wrapper">
+								<div class="icon"></div>
+							</div>
+							<div class="time">
+								<span>17:00</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="month">
+			<div class="inner">
+				<button disabled>Прогноз на месяц</button>
+			</div>
+		</div>
+	</div>
+	<div class="btn-wrapper" id="btn-wrapper">
+		<a class="btn" id="wapSubmitBtn" href="<TARIF_YES_URL>">
+			<span>Узнать</span>
+		</a>
+		<div class="cancel">
+			<a href="<TARIF_NO_URL>">
+				<span>Отмена</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="rules" id="footer">
+	<div class="inner blured">
+		<p>Информация для абонентов - тел. 8 800 500-25-43 (бесплатно в домашнем регионе) | <a href="ВАША ССЫЛКА НА ПРАВИЛА ПОДПИСКИ">Правила подписки поставщика услуг</a> | <a href="#<LK_LINK_URL>">Личный кабинет</a></p>
+	</div>
+</div>
+<script type="text/javascript">
+		//<![CDATA[
+		function rsz() {
+				var footer = document['getElementById']('footer');
+				var buttonWrap = document['getElementsByClassName']('btn-wrapper')[0];
+				footer['style']['bottom'] = "auto";
+				footer['style']['top'] = (window['innerHeight'] - footer.offsetHeight) + 'px';
+				if ((window['innerHeight'] > 212) && (window['innerHeight'] < 233)) {
+						buttonWrap['style']['marginTop'] = '-'+ (footer.offsetHeight-55) + 'px';
+				} else { buttonWrap['style']['marginTop'] = 0; }
+
+				document.body.style.height = window.innerHeight + 'px';
+		}
+		setInterval(function() {
+				rsz()
+		}, 100);
+		window['onresize'] = function() {
+				window['scrollTo'](0, 0);
+				setTimeout(function() {
+						rsz()
+				}, 100)
+		};
+		document.addEventListener('touchmove', function(e) {
+				e.preventDefault();
+		}, { passive: false });
+		//]]>
+</script>
+
+</body>
+</html>
