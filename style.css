@@ -754,6 +754,18 @@ form {
 	}
 }
 
+@media screen and (max-height: 325px) {
+	.month {
+		display: table-row;
+	}
+}
+
+@media screen and (max-height: 320px) {
+	.month {
+		display: none;
+	}
+}
+
 /*BUTTON*/
 
 .main .btn-wrapper {
