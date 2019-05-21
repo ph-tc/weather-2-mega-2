@@ -709,7 +709,7 @@ form {
 	}
 }
 
-@media screen and (max-height: 300px) {
+@media screen and (max-height: 325px) {
 	.hours {
 		display: none;
 	}
