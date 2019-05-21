@@ -758,9 +758,13 @@ form {
 	.month {
 		display: table-row;
 	}
+
+	.month .inner {
+		margin-bottom: 0;
+	}
 }
 
-@media screen and (max-height: 320px) {
+@media screen and (max-height: 240px) {
 	.month {
 		display: none;
 	}
