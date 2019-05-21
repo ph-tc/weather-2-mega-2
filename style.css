@@ -171,7 +171,7 @@ form {
 
 .header {
 	position: absolute;
-	top: 0px;
+	top: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
@@ -244,7 +244,7 @@ form {
 	border: none;
 }
 
-@media screen and (max-height: 420px) {
+@media screen and (max-height: 430px) {
 	.header {
 		background-color: #4a94eb;
 	}
@@ -307,9 +307,12 @@ form {
 }
 
 .temperature .degrees button .icon {
-	width: 80px;
-	height: 80px;
-	margin: 0 auto 10px;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 0;
+	margin-right: 10px;
+	vertical-align: middle;
 	background-image:	url('./navigation-shadow.png');
 	-webkit-background-size: contain;
 	background-size: contain;
@@ -318,42 +321,35 @@ form {
 }
 
 .temperature .degrees button p {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: right;
 	font-family: 'Roboto', serif;
-	font-size: 26px;
+	font-size: 20px;
 	font-weight: bold;
 	color: #eeeeee;
 	text-shadow: 0 0 10px #000;
 }
 
-@media screen and (max-height: 700px) {
-	.temperature .degrees button .icon {
-		display: inline-block;
-		width: 50px;
-		height: 50px;
-		margin-bottom: 0;
-		margin-right: 10px;
-		vertical-align: middle;
+@media screen and (max-height: 550px) {
+	.temperature .degrees {
+		top: 65%;
 	}
+}
 
-	.temperature .degrees button p {
-		display: inline-block;
-		font-size: 20px;
-		vertical-align: middle;
-		text-align: right;
+@media screen and (max-height: 500px) {
+	.temperature {
+		height: 164px;
 	}
 }
 
 @media screen and (max-height: 600px) {
-	.temperature {
-		height: 160px;
-	}
-
-	.temperature .degrees {
-		margin-top: 17px;
+	.main .details {
+		display: none;
 	}
 }
 
-@media screen and (max-height: 420px) {
+@media screen and (max-height: 430px) {
 	.temperature {
 		display: none;
 	}
@@ -363,7 +359,7 @@ form {
 
 .your-city {
 	position: absolute;
-	top: 70px;
+	top: 78px;
 	left: 0;
 	right: 0;
 	width: 100%;
@@ -450,7 +446,7 @@ form {
 	background-image:	url('./water.png');
 }
 
-@media screen and (max-height: 520px) {
+@media screen and (max-height: 470px) {
 	.details {
 		display: none;
 	}
@@ -697,7 +693,23 @@ form {
 	background-image: url('./cloudssun.png');
 }
 
-@media screen and (max-height: 520px) {
+@media screen and (max-height: 580px) {
+	.hours .inner {
+		padding-bottom: 20px;
+	}
+
+	.hours li {
+		height: 40px;
+	}
+}
+
+@media screen and (max-height: 450px) {
+	.hours li {
+		height: 20px;
+	}
+}
+
+@media screen and (max-height: 300px) {
 	.hours {
 		display: none;
 	}
@@ -724,7 +736,6 @@ form {
 	font-size: 14px;
 	font-weight: bold;
 	color: #333;
-	text-align: center;
 	border: none;
 	-webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -737,19 +748,7 @@ form {
 	text-align: left;
 }
 
-@media screen and (max-height: 630px) {
-	.month {
-		display: none;
-	}
-}
-
 @media screen and (max-height: 520px) {
-	.month {
-		display: table-row;
-	}
-}
-
-@media screen and (max-height: 320px) {
 	.month {
 		display: none;
 	}
@@ -842,10 +841,10 @@ form {
 	color: #fff;
 }
 
-@media screen and (max-height: 200px) and (orientation: landscape) {
+@media screen and (max-height: 220px) and (orientation: landscape) {
 	.main .btn-wrapper {
 		top: auto;
-		bottom: 36px;
+		bottom: 56px;
 		-webkit-transform: translate(0, -27px);
 		-ms-transform: translate(0, -27px);
 		transform: translate(0, -27px);
