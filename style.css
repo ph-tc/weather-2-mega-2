@@ -446,7 +446,7 @@ form {
 	background-image:	url('./water.png');
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 635px) {
 	.details {
 		display: none;
 	}
