@@ -117,7 +117,7 @@ html {
 }
 
 body {
-	position: relative;
+	position: fixed;
 	display: table;
 	height: 100%;
 	width: 100%;
@@ -125,6 +125,7 @@ body {
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	overflow: hidden;
 }
 
 form {
@@ -147,11 +148,13 @@ form {
 	font-size: 0;
 	text-align: center;
 	z-index: 10;
+	background-color: #387298;
 }
 
 .offer .inner {
 	position: relative;
 	width: 100%;
+	padding: 2px;
 }
 
 .offer span, .offer a {
@@ -179,7 +182,7 @@ form {
 	z-index: 2;
 }
 
-.header .inner {
+.header > .inner {
 	position: relative;
 	display: table;
 	width: 100%;
@@ -318,6 +321,7 @@ form {
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
+	filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
 }
 
 .temperature .degrees button p {
@@ -383,6 +387,7 @@ form {
 	background-position: center;
 	background-repeat: no-repeat;
 	vertical-align: middle;
+	filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
 }
 
 /*DETAILS*/
@@ -829,6 +834,7 @@ form {
 	-webkit-background-size: contain;
 	background-size: contain;
 	background-repeat: no-repeat;
+	filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
 }
 
 .main .cancel {
@@ -860,7 +866,7 @@ form {
 @media screen and (max-height: 220px) and (orientation: landscape) {
 	.main .btn-wrapper {
 		top: auto;
-		bottom: 56px;
+		bottom: 40px;
 		-webkit-transform: translate(0, -27px);
 		-ms-transform: translate(0, -27px);
 		transform: translate(0, -27px);
