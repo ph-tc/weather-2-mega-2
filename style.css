@@ -321,6 +321,7 @@ form {
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
+	-webkit-filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
 	filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
 }
 
@@ -387,6 +388,7 @@ form {
 	background-position: center;
 	background-repeat: no-repeat;
 	vertical-align: middle;
+	-webkit-filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
 	filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
 }
 
@@ -834,6 +836,7 @@ form {
 	-webkit-background-size: contain;
 	background-size: contain;
 	background-repeat: no-repeat;
+	-webkit-filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
 	filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
 }
 
